@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford University | Contact</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="overlay">
+        <nav id="navbar">
+            <div class="logo">
+                <img src="/img/hat.png" alt="">
+            </div>
+            <h1>Eduford</h1>
+
+            <ul>
+                <li class="item"><a href="home.html">HOME</a></li>
+                <li class="item"><a href="about.html">ABOUT</a></li>
+                <li class="item"><a href="course.html">COURSE</a></li>
+                <li class="item"><a href="blog.html">BLOG</a></li>
+                <li class="item"><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <h1 class="center">Contact Us</h1>
+        </section>
+    </section>
+
+    <div id="map"></div>
+
+    <section id="address">
+        <div class="address-item">
+            <div class="address-about-item">
+                <div class="address-logo">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="logo-desc">
+                    <h3>ABC Road, XYZ Building</h3>
+                    <p>Ahmedabad, Gujarat, India</p>
+                </div>
+            </div>
+            <div class="address-about-item">
+                <div class="address-logo">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="logo-desc">
+                    <h3>+91 7085432711</h3>
+                    <p>Monday to Saturday, 9AM to 6PM</p>
+                </div>
+            </div>
+            <div class="address-about-item">
+                <div class="address-logo">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <div class="logo-desc">
+                    <h3>info at mywebsite.com</h3>
+                    <p>Email us for any query</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="address-item">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <input type="text" placeholder="Enter Your Subject">
+                    <textarea name="comment" id="" cols="30" rows="10" placeholder="Your Comment"></textarea>
+                    <button>Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+        function initMap() {
+            let location = { lat: 23.065395199999998, lng: 72.53196799999999 };
+            let map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: location
+            });
+            let marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6AmzvaWM1MZW9CyOvZQ8BMDqnXniCpc&callback=initMap">
+        </script>
+</body>
+
+</html>
